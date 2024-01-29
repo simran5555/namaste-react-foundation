@@ -9,3 +9,10 @@
 - parcel uses babel to transpile jsx code into react code so that it can be understood by js engines
 - not only jsx to react but it also converts es6 js to a js that older browsers understand
 - go see how babel works behind the scene
+
+# what is a functional component
+- any js function that returns some piece of jsx code which is a react element (nested react element as well)
+- always initialize with capital letter
+
+# render functional component into root
+- root.render(HeadingComponent) // does not work

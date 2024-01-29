@@ -12,6 +12,25 @@ const jsxHeading = <h1 id="heading2" key="jsxheading">jsx heading</h1>
 console.log(jsxHeading)
 //console.log(heading) === console.log(jsxHeading) (same object)
 
+//React functional components 
+const HeadingComponent = () => (<h1>react functional component</h1>); // in case of single line returns skip the return keyword
+const NavComponent = () => {
+    return <nav>
+        <h1>logo</h1>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+        </ul>
+    </nav>
+}
+
+const Homepage = () => {
+   return <div>
+    <HeadingComponent />
+    <NavComponent />
+    </div>
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(jsxHeading)
+root.render(<Homepage />)
