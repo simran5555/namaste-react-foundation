@@ -8,7 +8,7 @@ console.log(heading)
 
 //creating react element using jsx
 //jsx code is transpiled into react.createelement by babel(from parcel)  creating a reactelement and then rendered into an htmlelement
-const jsxHeading = <h1 id="heading2" key="jsxheading">jsx heading</h1>
+const jsxHeading = <h1 id="heading2" key="jsxheading">jsx {3*2} heading</h1>
 console.log(jsxHeading)
 //console.log(heading) === console.log(jsxHeading) (same object)
 
@@ -26,8 +26,10 @@ const NavComponent = () => {
 
 const Homepage = () => {
    return <div>
-    <HeadingComponent />
+    {HeadingComponent()}
     <NavComponent />
+    <NavComponent></NavComponent>
+    {jsxHeading} {/* you can write any js code inside {} */}
     </div>
 }
 
